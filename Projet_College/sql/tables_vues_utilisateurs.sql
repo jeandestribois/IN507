@@ -290,6 +290,7 @@ create view espace_eleve as
 	from (eleve e
 		inner join cours co on e.nom_classe=co.nom_classe)
 		inner join professeur p on p.ID_professeur=co.ID_professeur
+		inner join absence a on a.ID_eleve=e.ID_eleve
 	where e.ID_eleve=substring_index(user(),'@',1);
 
 

@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="CSS/menu.css">
-	<title>Espace Eleve</title>
+	<title>Absences Eleve</title>
 </head>
 <body>
 	<h1>Espace Eleve</h1>
@@ -19,15 +19,8 @@
 	<p class="deconnexion">
 		<a href="bienvenue.php">Se deconnecter</a>
 	</p>
-	<p class="blabla">
-		Bonjour 
-		<?php
-			$bdd=mysqli_connect('localhost', $_SESSION['id'], $_SESSION['mdp'], 'Projet_College');
-			$result = mysqli_query($bdd, "select votre_prenom, votre_nom, classe from espace_eleve");
-			$donnee = mysqli_fetch_assoc($result);
-			echo $donnee["votre_prenom"] . ' ' . $donnee['votre_nom'];
-		?>.<br>
-		Votre classe est la <?php echo $donnee['classe'] ?>.
 	</p>
+	<?php $bdd=mysqli_connect('localhost', $_SESSION['id'], $_SESSION['mdp'], 'Projet_College'); ?>
+	
 </body>
 </html>
