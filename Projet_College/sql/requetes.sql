@@ -12,7 +12,7 @@ update classe
 	where nom='5A';
 
 insert into cours values
-	('Technologie','Mercredi', '8:00', '10:00', 2, 101, 1107, '5A', 1257);
+	('Technologie','Mercredi', '8:00', '10:00', 101, 1107, '5A', 1257);
 
 insert into absence values
 	(1066, 1257, '15/01/2015');
@@ -56,13 +56,6 @@ and cl.nom=co.nom_classe;
 select e.nom, e.prenom, count(a.ID_eleve) as 'Nombre_absence'
 from absence a inner join eleve e on a.ID_eleve=e.ID_eleve
 group by a.ID_eleve;
-
-/* Affiche le nom, le prenom et la somme total cours donnés par les professeurs dont leur nom commence par 'F' */
-select p.nom, p.prenom, sum(co.duree) as 'Duree_total_par_semaine'
-from professeur p inner join cours co on co.ID_professeur=p.ID_professeur
-where p.nom like 'F%'
-group by p.nom, p.prenom;
-
 
 /* Affiche le nom et prénom des professeurs ayant eu plus de 2 absences à un même cours */
 select p.nom, p.prenom

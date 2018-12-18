@@ -1,0 +1,32 @@
+body
+{
+	background-color: #E6E6E6;
+	text-align: center;
+}
+
+h1
+{
+	color: #2E64FE;
+	font-size: 3em;
+}
+
+p
+{
+	background-color: #A9E2F3;
+	font-size: 1.2em;
+	padding: 2% 2% 2% 2%;
+	margin: 5% 20% 5% 20%;
+}
+
+label
+{
+	display: block;
+	width: 50%;
+	float: left;
+
+}
+
+.bouton
+{
+	margin: 5% 0% 0% 0%;
+}
